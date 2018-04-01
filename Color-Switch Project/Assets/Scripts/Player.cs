@@ -5,6 +5,21 @@ public class Player : MonoBehaviour {
 	public float jumpForce = 10f;
 
 	public Rigidbody2D rb;
+
+	public SpriteRenderer sr;
+
+	public string currentColor;
+
+	public Color colorCyan;
+	public Color colorYellow;
+	public Color colorMagenta;
+	public Color colorPink;
+
+	
+	void Start()
+	{
+		SetRandomColor();
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -14,5 +29,37 @@ public class Player : MonoBehaviour {
 			rb.velocity = Vector2.up * jumpForce;
 		}
 
+	}
+
+	void OnTriggerEnter(Collider2D col) 
+	{
+		
+	}
+
+	void SetRandomColor()
+	{
+		// since i know how many colors the game will have, 
+		// it will look at the index and for each index there will be a specific outcome.
+		int index = Random.Range(0, 4);
+
+		switch (index)
+		{
+			case 0:
+				currentColor = "Cyan";
+				sr.color = colorCyan;
+				break;
+			case 1:
+				currentColor = "Yellow";
+				sr.color = colorYellow;
+				break;
+			case 2:
+				currentColor = "Magenta";
+				sr.color = colorMagenta;
+				break;
+			case 3:
+				currentColor = "Pink";
+				sr.color = colorPink;
+				break;
+		}
 	}
 }

@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 316166716}
   m_Layer: 0
   m_Name: Magenta
-  m_TagString: Untagged
+  m_TagString: Magenta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -346,6 +346,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 10
   rb: {fileID: 1096842029}
+  sr: {fileID: 1096842031}
+  currentColor: 
+  colorCyan: {r: 0.20784315, g: 0.8862746, b: 0.9490197, a: 1}
+  colorYellow: {r: 0.8941177, g: 0.8196079, b: 0.121568635, a: 1}
+  colorMagenta: {r: 0.54901963, g: 0.07450981, b: 0.9843138, a: 1}
+  colorPink: {r: 1, g: 0, b: 0.5019608, a: 1}
 --- !u!212 &1096842031
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -377,8 +383,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1054901249
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -415,7 +421,7 @@ GameObject:
   - component: {fileID: 1118974969}
   m_Layer: 0
   m_Name: Yellow
-  m_TagString: Untagged
+  m_TagString: Yellow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -617,7 +623,7 @@ GameObject:
   - component: {fileID: 1601884254}
   m_Layer: 0
   m_Name: Pink
-  m_TagString: Untagged
+  m_TagString: Pink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -740,7 +746,7 @@ GameObject:
   - component: {fileID: 1808198625}
   m_Layer: 0
   m_Name: Cyan
-  m_TagString: Untagged
+  m_TagString: Cyan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
