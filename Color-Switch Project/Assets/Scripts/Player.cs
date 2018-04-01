@@ -31,9 +31,13 @@ public class Player : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter(Collider2D col) 
+	void OnTriggerEnter2D(Collider2D col) 
 	{
-		
+		if (col.tag != currentColor)
+		{
+			// we hit a color which is not the same color of the player
+			Debug.Log("GAME OVER!");
+		}
 	}
 
 	void SetRandomColor()
