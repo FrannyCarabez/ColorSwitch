@@ -9,6 +9,8 @@ TagManager:
   - Magenta
   - Pink
   - ColorChanger
+  - PlayButton
+  - Star
   layers:
   - Default
   - TransparentFX

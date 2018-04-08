@@ -16,6 +16,12 @@ public class Player : MonoBehaviour {
 	public Color colorMagenta;
 	public Color colorPink;
 
+	public Transform SmallCirclePrefab;
+	public Transform ColorChangerPrefab;
+	public Transform StarPrefab;
+
+	public Vector3 Spawnlocation = new Vector3 (0, 800f, 0);
+
 	
 	void Start()
 	{
@@ -38,15 +44,24 @@ public class Player : MonoBehaviour {
 		{
 			SetRandomColor();
 			Destroy(col.gameObject);
+			
+			
 			return;
 		}
 
-		if (col.tag != currentColor)
+		if (col.tag == "Star")
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		}
+
+		else if(col.tag != currentColor)
 		{
 			// we hit a color which is not the same color of the player
-			Debug.Log("GAME OVER!");
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		}
+		
+		
+		
 	}
 
 	void SetRandomColor()
@@ -75,4 +90,6 @@ public class Player : MonoBehaviour {
 				break;
 		}
 	}
+
+	
 }
