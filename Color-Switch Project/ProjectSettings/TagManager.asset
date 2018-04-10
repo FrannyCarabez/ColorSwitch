@@ -11,6 +11,7 @@ TagManager:
   - ColorChanger
   - PlayButton
   - Star
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,8 @@ public class Player : MonoBehaviour {
 
 	public Rigidbody2D rb;
 
+	public Rigidbody2D ground;
+
 	public SpriteRenderer sr;
 
 	public string currentColor;
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour {
 	
 	void Start()
 	{
+		
 		SetRandomColor();
 	}
 	
@@ -34,7 +37,10 @@ public class Player : MonoBehaviour {
 		if(Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0))
 		{
 			rb.velocity = Vector2.up * jumpForce;
+			rb.constraints = ~RigidbodyConstraints2D.FreezePositionY;
 		}
+
+		
 
 	}
 
@@ -54,7 +60,7 @@ public class Player : MonoBehaviour {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}
 
-		else if(col.tag != currentColor)
+		else if(col.tag != currentColor || col.tag == "Ground")
 		{
 			// we hit a color which is not the same color of the player
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -90,6 +96,11 @@ public class Player : MonoBehaviour {
 				break;
 		}
 	}
+
+	
+
+	
+		
 
 	
 }
