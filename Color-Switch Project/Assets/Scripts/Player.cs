@@ -60,7 +60,7 @@ public class Player : MonoBehaviour {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}
 
-		else if(col.tag != currentColor || col.tag == "Ground")
+		else if(col.tag != currentColor)
 		{
 			// we hit a color which is not the same color of the player
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -68,6 +68,13 @@ public class Player : MonoBehaviour {
 		
 		
 		
+	}
+
+	private void OnBecameInvisible() {
+		if (rb.velocity.y < 0f)
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		}
 	}
 
 	void SetRandomColor()
